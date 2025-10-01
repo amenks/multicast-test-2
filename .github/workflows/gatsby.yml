@@ -1,0 +1,49 @@
+name: Build and Deploy Gatsby to FTPS
+
+on:
+  push:
+    branches: [main] # Adjust branch name as needed
+  repository_dispatch:
+    types: [deploy] # This matches the event_type from the WordPress plugin
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18" # Adjust version as needed
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build Gatsby site
+        run: yarn build
+
+      - name: Verify build output
+        run: |
+          echo "Contents of ./public directory:"
+          ls -la ./public/
+
+      - name: Deploy to FTPS server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 2121
+          local-dir: ./public/
+          server-dir: ./htdocs-SSL/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
+          security: loose # Enforces explicit FTPS over TLS
