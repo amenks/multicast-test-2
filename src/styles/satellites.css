@@ -1,0 +1,22 @@
+.data-html th{
+      text-align: left;
+      padding: 0.5rem;
+      border-width: 1px;
+}
+
+.data-html td{
+  vertical-align: top;
+  padding: 0.5rem;
+  border-width: 1px;
+}
+
+.data-html ul{
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  list-style-type: disc;
+}
+
+.data-html a{
+  text-decoration-line: underline !important;
+  color: black
+}

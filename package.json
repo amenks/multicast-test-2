@@ -1,0 +1,75 @@
+{
+  "name": "multicast-web",
+  "private": true,
+  "description": "MultiCAST web with web-gis",
+  "version": "0.1.0",
+  "author": "NetBistrot <info@netbistrot.com>",
+  "dependencies": {
+    "@arcgis/core": "^4.23.7",
+    "@esri/react-arcgis": "^5.1.0",
+    "autoprefixer": "^10.4.19",
+    "buffer": "^6.0.3",
+    "dumper.js": "^1.3.1",
+    "esri-loader": "^3.5.0",
+    "gatsby": "^5.13.3",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-matomo": "^0.16.0",
+    "gatsby-plugin-offline": "^5.13.0",
+    "gatsby-plugin-postcss": "^6.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-react-leaflet": "^4.0.3",
+    "gatsby-plugin-react-svg": "^3.1.0",
+    "gatsby-plugin-s3": "^0.3.8",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-wordpress": "^7.15.0",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "georaster": "^1.5.6",
+    "georaster-layer-for-leaflet": "^3.8.0",
+    "gsap": "3.9.1",
+    "he": "^1.2.0",
+    "jsdom": "^20.0.1",
+    "leaflet": "^1.8.0",
+    "leaflet-geotiff": "^0.2.0",
+    "leaflet-geotiff-2": "^1.1.0",
+    "postcss": "^8.4.13",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-icons-kit": "^2.0.0",
+    "react-leaflet": "^4.0.0",
+    "sharp": "^0.33.3",
+    "swiper": "^8.1.5",
+    "upng-js": "^2.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.0.24"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby-plugin-s3 deploy -y"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "packageManager": "yarn@1.22.19"
+}

@@ -1,0 +1,7 @@
+.img-container:hover{
+  background-image: url(./text-mask50.png);
+}
+
+.img-container-clear:hover{
+  background-image: url(./text-mask50-clear.png);
+}

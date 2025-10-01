@@ -1,0 +1,38 @@
+.mob-gallery-main {
+  overflow: hidden;
+  position: relative;
+}
+
+.mob-gallery-swiper {
+  display: flex;
+  overflow-x: visible;
+  transition-property: transform;
+  will-change: transform;
+}
+
+.mob-gallery-swiper img {
+  object-fit: contain;
+}
+
+.move {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0;
+    padding: 0
+  }
+  
+  .back {
+    left: 5px;
+  }
+  .next {
+    right: 5px;
+  }
